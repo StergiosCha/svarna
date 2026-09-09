@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="SVARNA">
+    <meta property="og:title" content="Software, Models &amp; Datasets - SVARNA">
+    <meta property="og:description" content="SVARNA software, fine-tuned models, and datasets: OYXOY, GRDD/GRDD+, Krikri LoRAs, RAG-to-Coq, Zeugma and more.">
+    <meta property="og:image" content="https://stergioscha.github.io/CLLT/images/og-image.png">
+    <meta property="og:url" content="https://stergioscha.github.io/CLLT/software.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Software, Models &amp; Datasets - SVARNA">
+    <meta name="twitter:description" content="SVARNA software, fine-tuned models, and datasets: OYXOY, GRDD/GRDD+, Krikri LoRAs, RAG-to-Coq, Zeugma and more.">
+    <meta name="twitter:image" content="https://stergioscha.github.io/CLLT/images/og-image.png">
+    <title>Software, Models & Datasets - SVARNA</title>
+    <meta name="description" content="SVARNA software, fine-tuned models, and datasets: OYXOY, GRDD/GRDD+, Krikri LoRAs, RAG-to-Coq, Zeugma and more.">
+    <link rel="icon" type="image/png" href="images/svarna-logo.png">
+    <link rel="stylesheet" href="styles.css">
+    <script>(function(){try{var t=localStorage.getItem('svarna-theme')||((window.matchMedia&&matchMedia('(prefers-color-scheme:dark)').matches)?'dark':'light');document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Pro:wght@400;600&family=JetBrains+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="index.html">
+                    <img src="images/svarna-logo.png" alt="SVARNA Lab Logo" class="logo"
+                        onerror="this.style.display='none'">
+                    <h1>SVARNA</h1>
+                </a>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li class="has-dropdown">
+                    <a href="#" onclick="return false;" style="cursor: pointer;">Research</a>
+                    <ul class="nav-dropdown">
+                        <li><a href="nli.html">Natural Language Inference</a></li>
+                        <li><a href="greek-nlp.html">Greek NLP</a></li>
+                        <li><a href="type-theory.html">Type-Theoretical Semantics</a></li>
+                        <li><a href="digital-humanities.html">Digital Humanities</a></li>
+                        <li><a href="distance-studies.html">Linguistic Distance Studies</a></li>
+                        <li><a href="llms.html">Large Language Models</a></li>
+                    </ul>
+                </li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="datasets.html">Datasets</a></li>
+                <li class="has-dropdown">
+                    <a href="#" onclick="return false;" style="cursor: pointer;">Team</a>
+                    <ul class="nav-dropdown">
+                        <li><a href="team.html">Team Overview</a></li>
+                        <li><a href="team.html#director">Lab Director</a></li>
+                        <li><a href="team.html#team">Collaborators</a></li>
+                        <li><a href="team.html#join">Join Our Team</a></li>
+                    </ul>
+                </li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="demos.html">Live Demos</a></li>
+                <li><a href="software.html">Software</a></li>
+                <li><a href="research-map.html">Research Map</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="theme-li"><button class="theme-toggle" type="button" aria-label="Toggle theme">&#9790;</button></li>
+            </ul>
+        </div>
+    </nav>
+    <header class="hero">
+        <div class="container">
+            <h1>Software, Models &amp; Datasets</h1>
+            <p class="subtitle">The SVARNA research toolkit &mdash; open platforms, code, models and corpora</p>
+            <p class="meta">Much of this work was carried out with the CLLT lab; datasets and code are openly licensed where noted.</p>
+        </div>
+    </header>
+    <section class="section">
+        <div class="container">
+<div class="tool-group">
+                <h2>Applications & Platforms</h2>
+                <div class="tool-grid">
+<div class="tool-item"><h3>Greek NLP Swiss Knife</h3><p>A unified portal hosting 10 containerized AI applications (~200k lines of code) for Modern Greek linguistics, classical studies, and digital humanities research, developed with cloud computing support from Microsoft. Role: Principal Architect &amp; Main Developer.</p><div class="tool-links"><a href="https://greek-app-heaven-portal.livelyhill-85880e66.westeurope.azurecontainerapps.io" target="_blank" rel="noopener">Live &#8599;</a></div></div>
+<div class="tool-item"><h3>MuVeS</h3><p>AI research assistant platform for paper discovery, automated literature reviews, interactive chat, paper analysis. Role: One of three main developers.</p><div class="tool-links"><a href="https://muves.io" target="_blank" rel="noopener">Live &#8599;</a></div></div>
+<div class="tool-item"><h3>MEDEA-NEUMOUSA</h3><p>AI platform for classical philology: (1) Translation between 18 ancient languages, (2) Knowledge graph extraction (RDF/TTL), (3) Zeugma neuro-symbolic reasoning (LLM+Prolog), (4) Emotion knowledge graphs, (5) Semantic analysis. Role: Main developer.</p><div class="tool-links"><a href="https://greek-app-heaven-medea.livelyhill-85880e66.westeurope.azurecontainerapps.io" target="_blank" rel="noopener">Live &#8599;</a></div></div>
+<div class="tool-item"><h3>Plot Analyzer</h3><p>Bidirectional neuro-symbolic narrative analysis platform with 8-stage hybrid architecture: neural perception via LLMs, symbolic reasoning based on 5 narrative theories (Aristotelian Poetics, Russian Formalism, etc.), bidirectional feedback loop, 14-type conflict taxonomy, and chunking &amp; reconciliation for long texts. Role: Main developer.</p><div class="tool-links"><a href="https://greek-app-heaven-plot.livelyhill-85880e66.westeurope.azurecontainerapps.io" target="_blank" rel="noopener">Live &#8599;</a><a href="https://github.com/StergiosCha/plot_analyzer" target="_blank" rel="noopener">Code</a></div></div>
+<div class="tool-item"><h3>Simasia-Studio (TextCraft)</h3><p>AI text editor and translator with RAG for domain-specific translation, grammar/style analysis, track changes output. Role: Main developer.</p><div class="tool-links"><a href="https://textcraft-ai.onrender.com" target="_blank" rel="noopener">Live &#8599;</a></div></div>
+<div class="tool-item"><h3>RAG-to-Coq Pipeline</h3><p>Historical event extraction with 10 extraction modes, 5 LLM support, translation to Coq for formal verification. Role: Main developer.</p><div class="tool-links"><a href="https://github.com/StergiosCha/rag-to-coq-pipeline" target="_blank" rel="noopener">Code</a></div></div>
+<div class="tool-item"><h3>NATS</h3><p>NLP analysis suite: document embeddings, NER (19 types), network analysis. Role: Main developer.</p><div class="tool-links"><a href="https://greek-app-heaven-nats.livelyhill-85880e66.westeurope.azurecontainerapps.io" target="_blank" rel="noopener">Live &#8599;</a><a href="https://github.com/StergiosCha/NATS" target="_blank" rel="noopener">Code</a></div></div>
+<div class="tool-item"><h3>Linguistic Distance Calculator</h3><p>7-dimension language distance measurement. Role: Main developer.</p><div class="tool-links"><a href="https://greek-app-heaven-linguistic.livelyhill-85880e66.westeurope.azurecontainerapps.io" target="_blank" rel="noopener">Live &#8599;</a><a href="https://github.com/StergiosCha/linguistic_distance" target="_blank" rel="noopener">Code</a></div></div>
+<div class="tool-item"><h3>Greek Curriculum Ontology Extractor</h3><p>LLM-based ontology extraction with RAG. Role: Main developer.</p><div class="tool-links"><a href="https://github.com/StergiosCha/greek-curriculum-ontology" target="_blank" rel="noopener">Code</a></div></div>
+<div class="tool-item"><h3>Syntax-Expert</h3><p>Multi-framework syntactic analysis (Minimalism, HPSG, LFG, DS). Role: Main developer.</p><div class="tool-links"><a href="https://github.com/StergiosCha/Syntax-expert" target="_blank" rel="noopener">Code</a></div></div>
+<div class="tool-item"><h3>DI_detector</h3><p>Greek dialect identification. Role: Main developer.</p><div class="tool-links"><a href="https://github.com/StergiosCha/DI_detector" target="_blank" rel="noopener">Code</a></div></div>
+<div class="tool-item"><h3>TextCraft Terminography</h3><p>AI-assisted terminography platform: automatic term extraction from corpora (PDF/DOCX/CSV) per ISO 1087-1:2000, neuro-symbolic definition evaluation, RAG pipeline with OpenAI embeddings, multi-LLM support (Gemini, Claude, GPT-4o, DeepSeek), ELETO terminology scraper. Role: Main developer.</p><div class="tool-links"><a href="https://greek-app-heaven-terminography.livelyhill-85880e66.westeurope.azurecontainerapps.io" target="_blank" rel="noopener">Live &#8599;</a></div></div>
+<div class="tool-item"><h3>Svarna: Greek Corpus Workbench</h3><p>Corpus linguistics workbench for Modern Greek: KWIC concordancing, frequency and n-gram analysis, discourse markers, keyness (log-likelihood), regex search, and LLM-assisted pragmatic analysis over 500M+ words across six corpora. Role: Main developer.</p><div class="tool-links"><a href="https://greek-corpus-workbench.wonderfulhill-e1c9f1a0.westeurope.azurecontainerapps.io" target="_blank" rel="noopener">Live &#8599;</a><a href="https://github.com/StergiosCha/SVARNA_CORPUS_APP" target="_blank" rel="noopener">Code</a></div></div>
+<div class="tool-item"><h3>Greek Rhyme System</h3><p>AI-powered identification and generation of rhyme patterns in Modern Greek poetry: full rhyme taxonomy (M/F2/F3, RICH, IDV, MOS, IMP), multi-LLM analysis with RAG corpus retrieval and a deterministic phonological verification loop. Role: Main developer.</p><div class="tool-links"><a href="https://greek-app-heaven-rhyme.livelyhill-85880e66.westeurope.azurecontainerapps.io" target="_blank" rel="noopener">Live &#8599;</a></div></div>
+<div class="tool-item"><h3>Greek Dialect Generator</h3><p>Text generation in four Greek dialects (Pontic, Cretan, Northern Greek, Cypriot) using LoRA adapters fine-tuned on GRDD+ (23k+ examples) over Llama 3.1, Llama 3, and Krikri base models, served with 4-bit quantization. Role: Main developer.</p><div class="tool-links"><a href="https://dialect-gen-cpu.blackplant-0f676054.westeurope.azurecontainerapps.io" target="_blank" rel="noopener">Live &#8599;</a><a href="https://github.com/StergiosCha/krikri_dialectal" target="_blank" rel="noopener">Code</a></div></div>
+<div class="tool-item"><h3>Voyant-NLP</h3><p>Text analysis and embeddings lab: word frequencies, concordance, collocates, Word2Vec/FastText training with analogies, NER, POS tagging, topic modeling, sentiment analysis, and document clustering. Role: Main developer.</p><div class="tool-links"><a href="https://greek-app-heaven-voyant.livelyhill-85880e66.westeurope.azurecontainerapps.io" target="_blank" rel="noopener">Live &#8599;</a></div></div>
+                </div>
+            </div>
+<div class="tool-group">
+                <h2>Code & Proof Assistants</h2>
+                <div class="tool-grid">
+<div class="tool-item"><h3>Coq for NL Semantics / FraCoq</h3><p>Proof assistant code for MTT semantics and NLI. Role: Main developer (MTT book), contributor (FraCoq).</p><div class="tool-links"><a href="https://github.com/StergiosCha/MTT-semantics_book" target="_blank" rel="noopener">Code</a></div></div>
+<div class="tool-item"><h3>Compositional Bayesian Semantics</h3><p>Haskell implementations. Role: Contributor.</p><div class="tool-links"><a href="https://github.com/GU-CLASP/CompositionalBayesianSemantics" target="_blank" rel="noopener">Code</a></div></div>
+<div class="tool-item"><h3>Anvec</h3><p>Metaphoricity detection. Role: Contributor.</p><div class="tool-links"><a href="https://gu-clasp.github.io/anvec-metaphor" target="_blank" rel="noopener">Live &#8599;</a><a href="https://github.com/gu-clasp/anvec-metaphor/" target="_blank" rel="noopener">Code</a></div></div>
+                </div>
+            </div>
+<div class="tool-group">
+                <h2>Fine-tuned Models</h2>
+                <div class="tool-grid">
+<div class="tool-item"><h3>Krikri-8B Base LoRA</h3><p>Fine-tuned Llama model for Greek dialectal varieties (Cretan, Cypriot, Northern, Pontic). Trained on GRDD dataset.</p><div class="tool-links"><a href="https://huggingface.co/Stergios/krikri-8b-base-lora" target="_blank" rel="noopener">Live &#8599;</a><a href="https://github.com/StergiosCha/krikri_dialectal" target="_blank" rel="noopener">Code</a></div></div>
+<div class="tool-item"><h3>Llama-3 8B Instruct LoRA</h3><p>Fine-tuned Llama-3 8B for Greek dialectal NLP.</p><div class="tool-links"><a href="https://huggingface.co/Stergios/llama3-8b-instruct-lora" target="_blank" rel="noopener">Live &#8599;</a><a href="https://github.com/StergiosCha/krikri_dialectal" target="_blank" rel="noopener">Code</a></div></div>
+<div class="tool-item"><h3>Llama-3.1 8B Instruct LoRA</h3><p>Fine-tuned Llama-3.1 8B for Greek dialectal NLP.</p><div class="tool-links"><a href="https://huggingface.co/Stergios/llama3.1-8b-instruct-lora" target="_blank" rel="noopener">Live &#8599;</a><a href="https://github.com/StergiosCha/krikri_dialectal" target="_blank" rel="noopener">Code</a></div></div>
+                </div>
+            </div>
+<div class="tool-group">
+                <h2>Datasets & Benchmarks</h2>
+                <div class="tool-grid">
+<div class="tool-item"><h3>HeptaTax</h3><p>Dataset and benchmark for classification of 16th-century Heptanesian notarial acts, with neuro-symbolic classification system and evaluation. Role: Principal contributor.</p><div class="tool-links"><a href="https://github.com/StergiosCha/HeptaTAX" target="_blank" rel="noopener">Code</a></div></div>
+<div class="tool-item"><h3>GRDD/GRDD+</h3><p>Greek Regional Dialects: 11 varieties, ~7M words. Role: Main creator.</p><div class="tool-links"><a href="https://github.com/StergiosCha/Greek_dialect_corpus" target="_blank" rel="noopener">Code</a></div></div>
+<div class="tool-item"><h3>DNLI</h3><p>First dialogue NLI with disfluencies. Role: Co-creator.</p><div class="tool-links"><a href="https://github.com/GU-CLASP/DNLI" target="_blank" rel="noopener">Code</a></div></div>
+<div class="tool-item"><h3>OYXOY</h3><p>Greek NLU benchmark: NLI (1,763), WSD (6,896), metaphor (14,416). Role: Co-creator.</p><div class="tool-links"><a href="https://github.com/StergiosCha/OYXOY" target="_blank" rel="noopener">Code</a></div></div>
+<div class="tool-item"><h3>SuperOYXOY</h3><p>Extended: paraphrase, augmented NLI, bias detection. Role: Co-creator.</p><div class="tool-links"></div></div>
+<div class="tool-item"><h3>Fine-Grained Entailment</h3><p>Greek FraCaS extension (428), RTE annotation, Greek XNLI. Role: Main creator.</p><div class="tool-links"><a href="https://github.com/GU-CLASP/LREC_2022" target="_blank" rel="noopener">Code</a></div></div>
+<div class="tool-item"><h3>Precise Entailment</h3><p>Expert-annotated NLI (150 examples). Role: Contributor.</p><div class="tool-links"></div></div>
+<div class="tool-item"><h3>Shami</h3><p>Levantine Arabic: 110K sentences. Role: Co-creator.</p><div class="tool-links"><a href="https://github.com/GU-CLASP/shami-corpus" target="_blank" rel="noopener">Code</a></div></div>
+<div class="tool-item"><h3>ATSAD</h3><p>Arabic Tweets Sentiment: 36K tweets. Role: Contributor.</p><div class="tool-links"><a href="https://github.com/motazsaad/arabic-sentiment-analysis" target="_blank" rel="noopener">Code</a></div></div>
+<div class="tool-item"><h3>Shami-Senti</h3><p>Levantine sentiment (~2.5K). Role: Contributor.</p><div class="tool-links"><a href="https://github.com/kathrein/Shami-Sentiment-Analyzer" target="_blank" rel="noopener">Code</a></div></div>
+<div class="tool-item"><h3>Greek Rhyme Dataset</h3><p>Dataset for Greek rhyme analysis. Role: Main creator.</p><div class="tool-links"><a href="https://github.com/StergiosCha/Greek_Rhyme" target="_blank" rel="noopener">Code</a></div></div>
+<div class="tool-item"><h3>Interwar Poetry &amp; Prose</h3><p>Modern Greek interwar poetry corpus for RAG generation. Role: Main creator.</p><div class="tool-links"><a href="https://github.com/StergiosCha/RAG-poetry" target="_blank" rel="noopener">Code</a></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<footer>
+        <div class="container">
+            <img src="images/svarna-hero.png" alt="SVARNA" style="height:54px;width:auto;display:block;margin:0 auto 0.75rem;opacity:0.95;">
+            <p>&copy; 2026 SVARNA &middot; Semantics, Variation And Reasoning in Neural-symbolic Architectures<br><span style="display:block;margin-top:0.4rem;font-size:0.82em;opacity:0.7;">Independent lab &middot; Athens. Much of this work was carried out with the CLLT lab at the University of Crete; as of 2026 the two are separate and independent.</span></p>
+            <div class="powered-by">
+                <span class="powered-by-text">Powered by</span>
+                <a href="https://www.simasiaai.gr/" target="_blank" rel="noopener noreferrer">
+                    <img src="images/simasiaai-logo.png" alt="SimasiaAI" class="powered-by-logo"
+                        onerror="this.style.display='none'">
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="mobile-menu.js"></script>
+    <script src="theme.js"></script>
+</body>
+</html>

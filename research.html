@@ -3,8 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Research - CLLT</title>
+    <meta name="description" content="SVARNA — Semantics, Variation And Reasoning in Neural-symbolic Architectures. Independent computational linguistics lab in Athens: neuro-symbolic NLP, formal semantics, Greek language varieties, and computational text analysis.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="SVARNA">
+    <meta property="og:title" content="Research - SVARNA">
+    <meta property="og:description" content="SVARNA — Semantics, Variation And Reasoning in Neural-symbolic Architectures. Independent computational linguistics lab in Athens: neuro-symbolic NLP, formal semantics, Greek language varieties, and computational text analysis.">
+    <meta property="og:image" content="https://stergioscha.github.io/CLLT/images/og-image.png">
+    <meta property="og:url" content="https://stergioscha.github.io/CLLT/research.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Research - SVARNA">
+    <meta name="twitter:description" content="SVARNA — Semantics, Variation And Reasoning in Neural-symbolic Architectures. Independent computational linguistics lab in Athens: neuro-symbolic NLP, formal semantics, Greek language varieties, and computational text analysis.">
+    <meta name="twitter:image" content="https://stergioscha.github.io/CLLT/images/og-image.png">
+    <title>Research - SVARNA</title>
+    <link rel="icon" type="image/png" href="images/svarna-logo.png">
     <link rel="stylesheet" href="styles.css">
+    <script>(function(){try{var t=localStorage.getItem('svarna-theme')||((window.matchMedia&&matchMedia('(prefers-color-scheme:dark)').matches)?'dark':'light');document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Newsreader:wght@400;600&display=swap" rel="stylesheet">
@@ -14,8 +27,8 @@
         <div class="container">
             <div class="nav-brand">
                 <a href="index.html" style="display: flex; align-items: center; text-decoration: none;">
-                    <img src="images/cllt-logo.png" alt="CLLT Lab Logo" class="logo">
-                    <h1>CLLT</h1>
+                    <img src="images/svarna-logo.png" alt="SVARNA Lab Logo" class="logo">
+                    <h1>SVARNA</h1>
                 </a>
             </div>
             <button class="mobile-menu-toggle" aria-label="Toggle menu">
@@ -51,7 +64,11 @@
                         <li><a href="publications.html#complete">Complete Bibliography</a></li>
                     </ul>
                 </li>
+                <li><a href="demos.html">Live Demos</a></li>
+                <li><a href="software.html">Software</a></li>
+                <li><a href="research-map.html">Research Map</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li class="theme-li"><button class="theme-toggle" type="button" aria-label="Toggle theme">&#9790;</button></li>
             </ul>
         </div>
     </nav>
@@ -225,7 +242,8 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Computational Linguistics and Language Technology Lab, University of Crete</p>
+            <img src="images/svarna-hero.png" alt="SVARNA" style="height:54px;width:auto;display:block;margin:0 auto 0.75rem;opacity:0.95;">
+            <p>&copy; 2026 SVARNA &middot; Semantics, Variation And Reasoning in Neural-symbolic Architectures<br><span style="display:block;margin-top:0.4rem;font-size:0.82em;opacity:0.7;">Independent lab &middot; Athens. Much of this work was carried out with the CLLT lab at the University of Crete; as of 2026 the two are separate and independent.</span></p>
             <div class="powered-by">
                 <span class="powered-by-text">Powered by</span>
                 <a href="https://www.simasiaai.gr/" target="_blank" rel="noopener noreferrer">
@@ -235,5 +253,6 @@
         </div>
     </footer>
     <script src="mobile-menu.js"></script>
+    <script src="theme.js"></script>
 </body>
 </html>

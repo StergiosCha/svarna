@@ -4,9 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News & Updates - CLLT Lab</title>
-    <meta name="description" content="Latest news from CLLT: publications, talks, datasets, grants, and achievements.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="SVARNA">
+    <meta property="og:title" content="News &amp; Updates - SVARNA Lab">
+    <meta property="og:description" content="Latest news from SVARNA: publications, talks, datasets, grants, and achievements.">
+    <meta property="og:image" content="https://stergioscha.github.io/CLLT/images/og-image.png">
+    <meta property="og:url" content="https://stergioscha.github.io/CLLT/news.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="News &amp; Updates - SVARNA Lab">
+    <meta name="twitter:description" content="Latest news from SVARNA: publications, talks, datasets, grants, and achievements.">
+    <meta name="twitter:image" content="https://stergioscha.github.io/CLLT/images/og-image.png">
+    <title>News & Updates - SVARNA Lab</title>
+    <meta name="description" content="Latest news from SVARNA: publications, talks, datasets, grants, and achievements.">
+    <link rel="icon" type="image/png" href="images/svarna-logo.png">
     <link rel="stylesheet" href="styles.css">
+    <script>(function(){try{var t=localStorage.getItem('svarna-theme')||((window.matchMedia&&matchMedia('(prefers-color-scheme:dark)').matches)?'dark':'light');document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -19,9 +31,9 @@
         <div class="container">
             <div class="nav-brand">
                 <a href="index.html">
-                    <img src="images/cllt-logo.png" alt="CLLT Lab Logo" class="logo"
+                    <img src="images/svarna-logo.png" alt="SVARNA Lab Logo" class="logo"
                         onerror="this.style.display='none'">
-                    <h1>CLLT</h1>
+                    <h1>SVARNA</h1>
                 </a>
             </div>
             <button class="mobile-menu-toggle" aria-label="Toggle menu">
@@ -54,7 +66,11 @@
                     </ul>
                 </li>
                 <li><a href="news.html" class="active">News</a></li>
+                <li><a href="demos.html">Live Demos</a></li>
+                <li><a href="software.html">Software</a></li>
+                <li><a href="research-map.html">Research Map</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li class="theme-li"><button class="theme-toggle" type="button" aria-label="Toggle theme">&#9790;</button></li>
             </ul>
         </div>
     </nav>
@@ -62,7 +78,7 @@
     <header class="hero">
         <div class="container">
             <h1>News & Updates</h1>
-            <p class="subtitle">Latest achievements from CLLT</p>
+            <p class="subtitle">Latest achievements from SVARNA</p>
             <p class="meta">Publications · Talks · Datasets · Funding · Collaborations</p>
         </div>
     </header>
@@ -366,7 +382,7 @@
                     </div>
                     <h3 style="margin-bottom: 0.75rem;">Invited Talk: "From Toy Grammars to ChatGPT"</h3>
                     <p style="color: var(--color-text-light); margin-bottom: 0.5rem;">
-                        Centre for Research and Innovation, University of Crete (April 2023).
+                        Centre for Research and Innovation (April 2023).
                     </p>
                 </div>
 
@@ -410,7 +426,8 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Computational Linguistics and Language Technology Lab, University of Crete</p>
+            <img src="images/svarna-hero.png" alt="SVARNA" style="height:54px;width:auto;display:block;margin:0 auto 0.75rem;opacity:0.95;">
+            <p>&copy; 2026 SVARNA &middot; Semantics, Variation And Reasoning in Neural-symbolic Architectures<br><span style="display:block;margin-top:0.4rem;font-size:0.82em;opacity:0.7;">Independent lab &middot; Athens. Much of this work was carried out with the CLLT lab at the University of Crete; as of 2026 the two are separate and independent.</span></p>
             <div class="powered-by">
                 <span class="powered-by-text">Powered by</span>
                 <a href="https://www.simasiaai.gr/" target="_blank" rel="noopener noreferrer">
@@ -421,6 +438,7 @@
         </div>
     </footer>
     <script src="mobile-menu.js"></script>
+    <script src="theme.js"></script>
 </body>
 
 </html>

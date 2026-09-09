@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="SVARNA">
+    <meta property="og:title" content="Research Map - SVARNA">
+    <meta property="og:description" content="Interactive map of SVARNA research areas and how computational, formal, and neuro-symbolic work connect.">
+    <meta property="og:image" content="https://stergioscha.github.io/CLLT/images/og-image.png">
+    <meta property="og:url" content="https://stergioscha.github.io/CLLT/research-map.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Research Map - SVARNA">
+    <meta name="twitter:description" content="Interactive map of SVARNA research areas and how computational, formal, and neuro-symbolic work connect.">
+    <meta name="twitter:image" content="https://stergioscha.github.io/CLLT/images/og-image.png">
+    <title>Research Map - SVARNA</title>
+    <meta name="description" content="Interactive map of SVARNA research areas and how computational, formal, and neuro-symbolic work connect.">
+    <link rel="icon" type="image/png" href="images/svarna-logo.png">
+    <link rel="stylesheet" href="styles.css">
+    <script>(function(){try{var t=localStorage.getItem('svarna-theme')||((window.matchMedia&&matchMedia('(prefers-color-scheme:dark)').matches)?'dark':'light');document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Pro:wght@400;600&family=JetBrains+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="index.html">
+                    <img src="images/svarna-logo.png" alt="SVARNA Lab Logo" class="logo"
+                        onerror="this.style.display='none'">
+                    <h1>SVARNA</h1>
+                </a>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li class="has-dropdown">
+                    <a href="#" onclick="return false;" style="cursor: pointer;">Research</a>
+                    <ul class="nav-dropdown">
+                        <li><a href="nli.html">Natural Language Inference</a></li>
+                        <li><a href="greek-nlp.html">Greek NLP</a></li>
+                        <li><a href="type-theory.html">Type-Theoretical Semantics</a></li>
+                        <li><a href="digital-humanities.html">Digital Humanities</a></li>
+                        <li><a href="distance-studies.html">Linguistic Distance Studies</a></li>
+                        <li><a href="llms.html">Large Language Models</a></li>
+                    </ul>
+                </li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="datasets.html">Datasets</a></li>
+                <li class="has-dropdown">
+                    <a href="#" onclick="return false;" style="cursor: pointer;">Team</a>
+                    <ul class="nav-dropdown">
+                        <li><a href="team.html">Team Overview</a></li>
+                        <li><a href="team.html#director">Lab Director</a></li>
+                        <li><a href="team.html#team">Collaborators</a></li>
+                        <li><a href="team.html#join">Join Our Team</a></li>
+                    </ul>
+                </li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="demos.html">Live Demos</a></li>
+                <li><a href="software.html">Software</a></li>
+                <li><a href="research-map.html">Research Map</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="theme-li"><button class="theme-toggle" type="button" aria-label="Toggle theme">&#9790;</button></li>
+            </ul>
+        </div>
+    </nav>
+    <header class="hero">
+        <div class="container">
+            <h1>Research Map</h1>
+            <p class="subtitle">How the lab's areas connect &mdash; computational, formal, and the neuro-symbolic bridge</p>
+        </div>
+    </header>
+    <section class="section">
+        <div class="container">
+            <div class="rmap-legend">
+                <span class="m-comp">Computational</span>
+                <span class="m-form">Formal</span>
+                <span class="m-bridge">Bridge (neuro-symbolic)</span>
+            </div>
+            <div class="rmap">
+                <div class="rmap-areas">
+                <button class="rmap-area" data-id="dl-nlu" data-meth="computational"><span class="rmap-meth">computational</span><h3>Deep Learning, NLU, Explainability &amp; Neuro-Symbolic Systems</h3></button>
+                <button class="rmap-area" data-id="greek-nlp" data-meth="computational"><span class="rmap-meth">computational</span><h3>NLP for Greek, its Dialects &amp; Under-Resourced Languages</h3></button>
+                <button class="rmap-area" data-id="arabic" data-meth="computational"><span class="rmap-meth">computational</span><h3>NLP for Arabic Dialects &amp; Language Distance Models</h3></button>
+                <button class="rmap-area" data-id="rag" data-meth="bridge"><span class="rmap-meth">bridge</span><h3>RAG &amp; Knowledge-Enhanced LLMs</h3></button>
+                <button class="rmap-area" data-id="type-theory" data-meth="formal"><span class="rmap-meth">formal</span><h3>Type-Theoretic Semantics &amp; Proof Assistants</h3></button>
+                <button class="rmap-area" data-id="bayesian" data-meth="formal"><span class="rmap-meth">formal</span><h3>Probabilistic &amp; Bayesian Semantics</h3></button>
+                <button class="rmap-area" data-id="digital-humanities" data-meth="bridge"><span class="rmap-meth">bridge</span><h3>AI for Digital Humanities</h3></button>
+                <button class="rmap-area" data-id="dialogue" data-meth="computational"><span class="rmap-meth">computational</span><h3>Dialogue Modelling &amp; Incremental Processing</h3></button>
+                <button class="rmap-area" data-id="formal-syntax" data-meth="formal"><span class="rmap-meth">formal</span><h3>Formal Syntax of Greek, Dialects &amp; Diachronic Linguistics</h3></button>
+                <button class="rmap-area" data-id="music" data-meth="formal"><span class="rmap-meth">formal</span><h3>Music &amp; Language: Shared Processing Strategies</h3></button>
+                </div>
+                <aside class="rmap-detail" id="rmap-detail">
+                    <h3>Select a research area</h3>
+                    <p style="color:var(--color-text-light);">Click any area to see its focus, related software, and how it connects to the rest of the lab's work.</p>
+                </aside>
+            </div>
+        </div>
+    </section>
+    <script>
+      var RMAP={"dl-nlu": {"label": "Deep Learning, NLU, Explainability & Neuro-Symbolic Systems", "meth": "computational", "desc": "NLI evaluation, annotation artifacts, neuro-symbolic integration with Coq, LLM critique and explanation.", "software": ["MEDEA", "RAG-to-Coq", "DI_detector"], "conn": ["RAG & Knowledge-Enhanced LLMs", "NLP for Greek, its Dialects & Under-Resourced Languages", "Type-Theoretic Semantics & Proof Assistants", "AI for Digital Humanities"]}, "greek-nlp": {"label": "NLP for Greek, its Dialects & Under-Resourced Languages", "meth": "computational", "desc": "GRDD/GRDD+ dialect datasets, OYXOY/SuperOYXOY benchmarks, Krikri models, dialect identification.", "software": ["DI_detector"], "conn": ["Deep Learning, NLU, Explainability & Neuro-Symbolic Systems", "NLP for Arabic Dialects & Language Distance Models", "Formal Syntax of Greek, Dialects & Diachronic Linguistics", "AI for Digital Humanities"]}, "arabic": {"label": "NLP for Arabic Dialects & Language Distance Models", "meth": "computational", "desc": "Shami corpus, ATSAD sentiment analysis, computational dialectometry, language distance frameworks.", "software": ["Dialect Analyzer", "Distance Calculator"], "conn": ["NLP for Greek, its Dialects & Under-Resourced Languages", "Formal Syntax of Greek, Dialects & Diachronic Linguistics"]}, "rag": {"label": "RAG & Knowledge-Enhanced LLMs", "meth": "bridge", "desc": "MEDEA-NEUMOUSA for classical philology, RAG-to-Coq verification, TextCraft, poetry generation.", "software": ["MuVeS", "Plot Analyzer", "MEDEA", "TextCraft", "RAG-to-Coq"], "conn": ["Deep Learning, NLU, Explainability & Neuro-Symbolic Systems", "Type-Theoretic Semantics & Proof Assistants", "AI for Digital Humanities"]}, "type-theory": {"label": "Type-Theoretic Semantics & Proof Assistants", "meth": "formal", "desc": "Martin-L\u00f6f Type Theory for NL semantics, Coq for adjectives, adverbs, copredication, coordination.", "software": ["Coq for NL Semantics"], "conn": ["Deep Learning, NLU, Explainability & Neuro-Symbolic Systems", "RAG & Knowledge-Enhanced LLMs", "Probabilistic & Bayesian Semantics", "Dialogue Modelling & Incremental Processing", "Formal Syntax of Greek, Dialects & Diachronic Linguistics"]}, "bayesian": {"label": "Probabilistic & Bayesian Semantics", "meth": "formal", "desc": "Bayesian Inference Semantics, predicates-as-boxes, compositional pragmatics, Monte Carlo, Haskell.", "software": [], "conn": ["Type-Theoretic Semantics & Proof Assistants"]}, "digital-humanities": {"label": "AI for Digital Humanities", "meth": "bridge", "desc": "Plot Analyzer for narrative, MEDEA for classical texts, NATS text analysis, ontology extraction.", "software": ["Plot Analyzer", "MEDEA", "NATS"], "conn": ["RAG & Knowledge-Enhanced LLMs", "NLP for Greek, its Dialects & Under-Resourced Languages", "Deep Learning, NLU, Explainability & Neuro-Symbolic Systems"]}, "dialogue": {"label": "Dialogue Modelling & Incremental Processing", "meth": "computational", "desc": "Split utterances, fragmentary answers, afterthoughts, shared utterances, Dynamic Syntax, DNLI.", "software": [], "conn": ["Type-Theoretic Semantics & Proof Assistants", "Formal Syntax of Greek, Dialects & Diachronic Linguistics", "Music & Language: Shared Processing Strategies"]}, "formal-syntax": {"label": "Formal Syntax of Greek, Dialects & Diachronic Linguistics", "meth": "formal", "desc": "Clitic systems (Cypriot, Griko, Pontic, Northern Greek), Dynamic Syntax, PCC, polydefinites.", "software": [], "conn": ["NLP for Greek, its Dialects & Under-Resourced Languages", "NLP for Arabic Dialects & Language Distance Models", "Type-Theoretic Semantics & Proof Assistants", "Dialogue Modelling & Incremental Processing", "Music & Language: Shared Processing Strategies"]}, "music": {"label": "Music & Language: Shared Processing Strategies", "meth": "formal", "desc": "Polyrhythm processing, shared parsing mechanisms, Dynamic Syntax for music-language interaction.", "software": [], "conn": ["Dialogue Modelling & Incremental Processing", "Formal Syntax of Greek, Dialects & Diachronic Linguistics"]}};
+      (function(){
+        var detail=document.getElementById('rmap-detail');
+        document.querySelectorAll('.rmap-area').forEach(function(btn){
+          btn.addEventListener('click',function(){
+            document.querySelectorAll('.rmap-area').forEach(function(b){b.classList.remove('active');});
+            btn.classList.add('active');
+            var a=RMAP[btn.getAttribute('data-id')]; if(!a) return;
+            var sw=a.software&&a.software.length?'<p><strong>Software:</strong> '+a.software.join(', ')+'</p>':'';
+            var cn=a.conn&&a.conn.length?'<p><strong>Connects to:</strong></p><ul>'+a.conn.map(function(c){return '<li>'+c+'</li>';}).join('')+'</ul>':'';
+            detail.innerHTML='<h3>'+a.label+'</h3><p class="rmap-meth" style="margin-bottom:.75rem;">'+a.meth+'</p><p style="color:var(--color-text-light);">'+a.desc+'</p>'+sw+cn;
+          });
+        });
+      })();
+    </script>
+
+<footer>
+        <div class="container">
+            <img src="images/svarna-hero.png" alt="SVARNA" style="height:54px;width:auto;display:block;margin:0 auto 0.75rem;opacity:0.95;">
+            <p>&copy; 2026 SVARNA &middot; Semantics, Variation And Reasoning in Neural-symbolic Architectures<br><span style="display:block;margin-top:0.4rem;font-size:0.82em;opacity:0.7;">Independent lab &middot; Athens. Much of this work was carried out with the CLLT lab at the University of Crete; as of 2026 the two are separate and independent.</span></p>
+            <div class="powered-by">
+                <span class="powered-by-text">Powered by</span>
+                <a href="https://www.simasiaai.gr/" target="_blank" rel="noopener noreferrer">
+                    <img src="images/simasiaai-logo.png" alt="SimasiaAI" class="powered-by-logo"
+                        onerror="this.style.display='none'">
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="mobile-menu.js"></script>
+    <script src="theme.js"></script>
+</body>
+</html>

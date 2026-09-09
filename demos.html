@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="SVARNA">
+    <meta property="og:title" content="Live Demos - SVARNA">
+    <meta property="og:description" content="Live SVARNA research platforms: Greek corpus workbench, neuro-symbolic classical AI, dialect generation, and more.">
+    <meta property="og:image" content="https://stergioscha.github.io/CLLT/images/og-image.png">
+    <meta property="og:url" content="https://stergioscha.github.io/CLLT/demos.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Live Demos - SVARNA">
+    <meta name="twitter:description" content="Live SVARNA research platforms: Greek corpus workbench, neuro-symbolic classical AI, dialect generation, and more.">
+    <meta name="twitter:image" content="https://stergioscha.github.io/CLLT/images/og-image.png">
+    <title>Live Demos - SVARNA</title>
+    <meta name="description" content="Live SVARNA research platforms: Greek corpus workbench, neuro-symbolic classical AI, dialect generation, and more.">
+    <link rel="icon" type="image/png" href="images/svarna-logo.png">
+    <link rel="stylesheet" href="styles.css">
+    <script>(function(){try{var t=localStorage.getItem('svarna-theme')||((window.matchMedia&&matchMedia('(prefers-color-scheme:dark)').matches)?'dark':'light');document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Pro:wght@400;600&family=JetBrains+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="index.html">
+                    <img src="images/svarna-logo.png" alt="SVARNA Lab Logo" class="logo"
+                        onerror="this.style.display='none'">
+                    <h1>SVARNA</h1>
+                </a>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li class="has-dropdown">
+                    <a href="#" onclick="return false;" style="cursor: pointer;">Research</a>
+                    <ul class="nav-dropdown">
+                        <li><a href="nli.html">Natural Language Inference</a></li>
+                        <li><a href="greek-nlp.html">Greek NLP</a></li>
+                        <li><a href="type-theory.html">Type-Theoretical Semantics</a></li>
+                        <li><a href="digital-humanities.html">Digital Humanities</a></li>
+                        <li><a href="distance-studies.html">Linguistic Distance Studies</a></li>
+                        <li><a href="llms.html">Large Language Models</a></li>
+                    </ul>
+                </li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="datasets.html">Datasets</a></li>
+                <li class="has-dropdown">
+                    <a href="#" onclick="return false;" style="cursor: pointer;">Team</a>
+                    <ul class="nav-dropdown">
+                        <li><a href="team.html">Team Overview</a></li>
+                        <li><a href="team.html#director">Lab Director</a></li>
+                        <li><a href="team.html#team">Collaborators</a></li>
+                        <li><a href="team.html#join">Join Our Team</a></li>
+                    </ul>
+                </li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="demos.html">Live Demos</a></li>
+                <li><a href="software.html">Software</a></li>
+                <li><a href="research-map.html">Research Map</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="theme-li"><button class="theme-toggle" type="button" aria-label="Toggle theme">&#9790;</button></li>
+            </ul>
+        </div>
+    </nav>
+    <header class="hero">
+        <div class="container">
+            <h1>Live Demos</h1>
+            <p class="subtitle">Research platforms you can run in your browser</p>
+            <p class="meta">Neuro-symbolic NLP &middot; Greek language technology &middot; Digital humanities</p>
+        </div>
+    </header>
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured &mdash; Svarna — Greek Corpus Workbench</h2>
+                <p class="section-subtitle">Concordancing, frequencies, discourse markers, keyness and LLM-assisted analysis over 500M+ words of Modern Greek, live in your browser.</p>
+            </div>
+            <div class="demo-embed-wrap">
+                <iframe src="https://greek-corpus-workbench.wonderfulhill-e1c9f1a0.westeurope.azurecontainerapps.io" title="Svarna — Greek Corpus Workbench" loading="lazy"></iframe>
+            </div>
+            <p style="text-align:center;color:var(--color-text-muted);font-size:.85rem;margin:.75rem 0 1rem;">If the embed does not load, use the button below (some apps block embedding).</p>
+            <div style="text-align:center;"><a class="btn btn-primary" href="https://greek-corpus-workbench.wonderfulhill-e1c9f1a0.westeurope.azurecontainerapps.io" target="_blank" rel="noopener">Open full app &#8599;</a> <a class="btn btn-secondary" href="https://github.com/StergiosCha/SVARNA_CORPUS_APP" target="_blank" rel="noopener">GitHub</a> <a class="btn btn-secondary" href="https://arxiv.org/abs/2607.00970" target="_blank" rel="noopener">Paper</a></div>
+        </div>
+    </section>
+    <section class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <h2>All Live Demos</h2>
+                <p class="section-subtitle">Containerized platforms for Greek NLP, classical studies, and neuro-symbolic AI</p>
+            </div>
+            <div class="demos-grid" style="margin-top:2.5rem;">
+<div class="demo-card">
+        <div class="demo-glyph">Α</div>
+        <h3>Greek NLP Swiss Knife</h3>
+        <p>The portal: ten containerized research platforms for Modern Greek linguistics, classical studies, and digital humanities.</p>
+        <div class="demo-tags"><span class="demo-tag">10 Platforms</span><span class="demo-tag">Portal</span><span class="demo-tag">Azure</span></div>
+        <div class="demo-links"><a href="https://greek-app-heaven-portal.livelyhill-85880e66.westeurope.azurecontainerapps.io" target="_blank" rel="noopener">Open &#8599;</a></div>
+      </div>
+<div class="demo-card">
+        <div class="demo-glyph">☤</div>
+        <h3>MEDEA-NEUMOUSA</h3>
+        <p>Neuro-symbolic AI for classical studies: translation across 18 ancient languages, knowledge graphs, and Prolog-based reasoning.</p>
+        <div class="demo-tags"><span class="demo-tag">Ancient Languages</span><span class="demo-tag">Knowledge Graphs</span><span class="demo-tag">Zeugma</span></div>
+        <div class="demo-links"><a href="https://greek-app-heaven-medea.livelyhill-85880e66.westeurope.azurecontainerapps.io" target="_blank" rel="noopener">Open &#8599;</a></div>
+      </div>
+<div class="demo-card">
+        <div class="demo-glyph">♫</div>
+        <h3>Greek Rhyme System</h3>
+        <p>Identify and generate rhyme patterns in Modern Greek poetry with multi-LLM analysis and phonological verification.</p>
+        <div class="demo-tags"><span class="demo-tag">Rhyme Taxonomy</span><span class="demo-tag">RAG</span><span class="demo-tag">Verification Loop</span></div>
+        <div class="demo-links"><a href="https://greek-app-heaven-rhyme.livelyhill-85880e66.westeurope.azurecontainerapps.io" target="_blank" rel="noopener">Open &#8599;</a></div>
+      </div>
+<div class="demo-card">
+        <div class="demo-glyph">Γ</div>
+        <h3>Dialect Generator</h3>
+        <p>Text generation in Pontic, Cretan, Northern Greek, and Cypriot via LoRA adapters fine-tuned on the GRDD+ corpus.</p>
+        <div class="demo-tags"><span class="demo-tag">4 Dialects</span><span class="demo-tag">LoRA</span><span class="demo-tag">GRDD+</span></div>
+        <div class="demo-links"><a href="https://dialect-gen-cpu.blackplant-0f676054.westeurope.azurecontainerapps.io" target="_blank" rel="noopener">Open &#8599;</a><a href="https://github.com/StergiosCha/krikri_dialectal" target="_blank" rel="noopener">GitHub</a></div>
+      </div>
+<div class="demo-card">
+        <div class="demo-glyph">✎</div>
+        <h3>PlotAnalyzer</h3>
+        <p>Neuro-symbolic narrative analysis through five theories, from Aristotelian Poetics to Russian Formalism.</p>
+        <div class="demo-tags"><span class="demo-tag">5 Theories</span><span class="demo-tag">NeSy</span><span class="demo-tag">Conflict Detection</span></div>
+        <div class="demo-links"><a href="https://greek-app-heaven-plot.livelyhill-85880e66.westeurope.azurecontainerapps.io" target="_blank" rel="noopener">Open &#8599;</a><a href="https://github.com/StergiosCha/plot_analyzer" target="_blank" rel="noopener">GitHub</a></div>
+      </div>
+<div class="demo-card">
+        <div class="demo-glyph">Δ</div>
+        <h3>Linguistic Distance</h3>
+        <p>Measure linguistic distance across seven dimensions for eleven language pairs, from Ancient to Modern Greek and beyond.</p>
+        <div class="demo-tags"><span class="demo-tag">7 Dimensions</span><span class="demo-tag">WALS</span><span class="demo-tag">URIEL+</span></div>
+        <div class="demo-links"><a href="https://greek-app-heaven-linguistic.livelyhill-85880e66.westeurope.azurecontainerapps.io" target="_blank" rel="noopener">Open &#8599;</a><a href="https://github.com/StergiosCha/linguistic_distance" target="_blank" rel="noopener">GitHub</a></div>
+      </div>
+<div class="demo-card">
+        <div class="demo-glyph">◇</div>
+        <h3>NATS</h3>
+        <p>Named entity recognition with morphological normalization, embeddings, and interactive entity networks for Greek.</p>
+        <div class="demo-tags"><span class="demo-tag">NER</span><span class="demo-tag">Embeddings</span><span class="demo-tag">Networks</span></div>
+        <div class="demo-links"><a href="https://greek-app-heaven-nats.livelyhill-85880e66.westeurope.azurecontainerapps.io" target="_blank" rel="noopener">Open &#8599;</a><a href="https://github.com/StergiosCha/NATS" target="_blank" rel="noopener">GitHub</a></div>
+      </div>
+<div class="demo-card">
+        <div class="demo-glyph">⚙</div>
+        <h3>Voyant-NLP</h3>
+        <p>Text analysis and embeddings lab: Word2Vec/FastText training, topics, sentiment, POS tagging, and clustering.</p>
+        <div class="demo-tags"><span class="demo-tag">Word2Vec</span><span class="demo-tag">Topics</span><span class="demo-tag">KWIC</span></div>
+        <div class="demo-links"><a href="https://greek-app-heaven-voyant.livelyhill-85880e66.westeurope.azurecontainerapps.io" target="_blank" rel="noopener">Open &#8599;</a></div>
+      </div>
+<div class="demo-card">
+        <div class="demo-glyph">☶</div>
+        <h3>TermGuard</h3>
+        <p>AI-assisted terminography: term extraction, ISO 1087-compliant definitions, and neuro-symbolic validation.</p>
+        <div class="demo-tags"><span class="demo-tag">ISO 1087</span><span class="demo-tag">RAG</span><span class="demo-tag">Symbolic Parser</span></div>
+        <div class="demo-links"><a href="https://greek-app-heaven-terminography.livelyhill-85880e66.westeurope.azurecontainerapps.io" target="_blank" rel="noopener">Open &#8599;</a></div>
+      </div>
+            </div>
+        </div>
+    </section>
+
+<footer>
+        <div class="container">
+            <img src="images/svarna-hero.png" alt="SVARNA" style="height:54px;width:auto;display:block;margin:0 auto 0.75rem;opacity:0.95;">
+            <p>&copy; 2026 SVARNA &middot; Semantics, Variation And Reasoning in Neural-symbolic Architectures<br><span style="display:block;margin-top:0.4rem;font-size:0.82em;opacity:0.7;">Independent lab &middot; Athens. Much of this work was carried out with the CLLT lab at the University of Crete; as of 2026 the two are separate and independent.</span></p>
+            <div class="powered-by">
+                <span class="powered-by-text">Powered by</span>
+                <a href="https://www.simasiaai.gr/" target="_blank" rel="noopener noreferrer">
+                    <img src="images/simasiaai-logo.png" alt="SimasiaAI" class="powered-by-logo"
+                        onerror="this.style.display='none'">
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="mobile-menu.js"></script>
+    <script src="theme.js"></script>
+</body>
+</html>
