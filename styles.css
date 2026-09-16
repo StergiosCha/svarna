@@ -1513,3 +1513,11 @@ html[data-theme="dark"] .metric-num { color: var(--color-accent); }
     .theme-li { border-bottom: none; }
     .theme-toggle { margin-top: .5rem; }
 }
+
+/* Frame dark infographics (e.g. OYXOY) so they stand out from the page, especially in dark mode */
+.about-image { border: 1px solid var(--color-border); box-shadow: var(--shadow-md); background: var(--color-bg-light); }
+html[data-theme="dark"] .about-image {
+    border-color: #3A4B63;
+    box-shadow: 0 0 0 1px rgba(126,168,230,.25), 0 10px 30px rgba(0,0,0,.6);
+}
+html[data-theme="dark"] .about-image img { filter: brightness(1.12) contrast(1.05); }
