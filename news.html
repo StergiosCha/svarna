@@ -18,6 +18,7 @@
     <meta name="description" content="Latest news from SVARNA: publications, talks, datasets, grants, and achievements.">
     <link rel="icon" type="image/png" href="images/svarna-logo.png">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="enhance.css">
     <script>(function(){try{var t=localStorage.getItem('svarna-theme')||((window.matchMedia&&matchMedia('(prefers-color-scheme:dark)').matches)?'dark':'light');document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -46,6 +47,7 @@
                 <li class="has-dropdown">
                     <a href="#" onclick="return false;" style="cursor: pointer;">Research</a>
                     <ul class="nav-dropdown">
+                        <li><a href="research.html">Overview</a></li>
                         <li><a href="nli.html">Natural Language Inference</a></li>
                         <li><a href="greek-nlp.html">Greek NLP</a></li>
                         <li><a href="type-theory.html">Type-Theoretical Semantics</a></li>
@@ -85,6 +87,11 @@
     <section class="section">
         <div class="container">
             <div style="max-width: 900px; margin: 0 auto;">
+                <div class="news-tools" id="newsTools">
+                    <input type="search" id="newsSearch" placeholder="Search news…" aria-label="Search news">
+                    <div class="news-years" id="newsYears" role="group" aria-label="Filter by year"></div>
+                    <span class="news-count" id="newsCount"></span>
+                </div>
 
                 <!-- 2026 -->
                 <h2
@@ -438,6 +445,7 @@
     </footer>
     <script src="mobile-menu.js"></script>
     <script src="theme.js"></script>
+    <script src="news-filter.js"></script>
 </body>
 
 </html>

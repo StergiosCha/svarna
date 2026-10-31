@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Handle dropdowns on mobile (click to toggle)
     dropdownParents.forEach(parent => {
-        const link = parent.querySelector('> a');
+        const link = parent.querySelector(':scope > a');
         if (link) {
             link.addEventListener('click', function(e) {
                 if (window.innerWidth <= 768) {

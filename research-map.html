@@ -17,6 +17,7 @@
     <meta name="description" content="Interactive map of SVARNA research areas and how computational, formal, and neuro-symbolic work connect.">
     <link rel="icon" type="image/png" href="images/svarna-logo.png">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="enhance.css">
     <script>(function(){try{var t=localStorage.getItem('svarna-theme')||((window.matchMedia&&matchMedia('(prefers-color-scheme:dark)').matches)?'dark':'light');document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -42,6 +43,7 @@
                 <li class="has-dropdown">
                     <a href="#" onclick="return false;" style="cursor: pointer;">Research</a>
                     <ul class="nav-dropdown">
+                        <li><a href="research.html">Overview</a></li>
                         <li><a href="nli.html">Natural Language Inference</a></li>
                         <li><a href="greek-nlp.html">Greek NLP</a></li>
                         <li><a href="type-theory.html">Type-Theoretical Semantics</a></li>
@@ -63,7 +65,7 @@
                 <li><a href="news.html">News</a></li>
                 <li><a href="demos.html">Live Demos</a></li>
                 <li><a href="software.html">Software</a></li>
-                <li><a href="research-map.html">Research Map</a></li>
+                <li><a href="research-map.html" class="active">Research Map</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li class="theme-li"><button class="theme-toggle" type="button" aria-label="Toggle theme">&#9790;</button></li>
             </ul>
@@ -83,6 +85,14 @@
                 <span class="m-bridge">Bridge (neuro-symbolic)</span>
             </div>
             <div class="rmap">
+                <div class="rmap-main">
+                <div class="rmap-graph-wrap">
+                    <div class="rmap-graph-tools">
+                        <span id="rmapStats"></span>
+                        <label><input type="checkbox" id="rmapShowSw" checked> show software</label>
+                    </div>
+                    <svg id="rmapGraph" viewBox="0 0 820 540" role="img" aria-label="Network of the lab's research areas, their connections and shared software"></svg>
+                </div>
                 <div class="rmap-areas">
                 <button class="rmap-area" data-id="dl-nlu" data-meth="computational"><span class="rmap-meth">computational</span><h3>Deep Learning, NLU, Explainability &amp; Neuro-Symbolic Systems</h3></button>
                 <button class="rmap-area" data-id="greek-nlp" data-meth="computational"><span class="rmap-meth">computational</span><h3>NLP for Greek, its Dialects &amp; Under-Resourced Languages</h3></button>
@@ -95,9 +105,10 @@
                 <button class="rmap-area" data-id="formal-syntax" data-meth="formal"><span class="rmap-meth">formal</span><h3>Formal Syntax of Greek, Dialects &amp; Diachronic Linguistics</h3></button>
                 <button class="rmap-area" data-id="music" data-meth="formal"><span class="rmap-meth">formal</span><h3>Music &amp; Language: Shared Processing Strategies</h3></button>
                 </div>
+                </div>
                 <aside class="rmap-detail" id="rmap-detail">
                     <h3>Select a research area</h3>
-                    <p style="color:var(--color-text-light);">Click any area to see its focus, related software, and how it connects to the rest of the lab's work.</p>
+                    <p style="color:var(--color-text-light);">Hover a node to see its neighbours. Click an area (circle) or a tool (diamond) to see its focus, related software, and how it connects to the rest of the lab's work.</p>
                 </aside>
             </div>
         </div>
@@ -118,6 +129,7 @@
         });
       })();
     </script>
+    <script src="rmap-graph.js"></script>
 
 <footer>
         <div class="container">

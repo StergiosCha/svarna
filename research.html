@@ -26,8 +26,9 @@
     <nav class="navbar">
         <div class="container">
             <div class="nav-brand">
-                <a href="index.html" style="display: flex; align-items: center; text-decoration: none;">
-                    <img src="images/svarna-logo.png" alt="SVARNA Lab Logo" class="logo">
+                <a href="index.html">
+                    <img src="images/svarna-logo.png" alt="SVARNA Lab Logo" class="logo"
+                        onerror="this.style.display='none'">
                     <h1>SVARNA</h1>
                 </a>
             </div>
@@ -39,14 +40,19 @@
             <ul class="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li class="has-dropdown">
-                    <a href="research.html" class="active">Research</a>
+                    <a href="#" onclick="return false;" style="cursor: pointer;" class="active">Research</a>
                     <ul class="nav-dropdown">
-                        <li><a href="research.html#areas">Research Areas</a></li>
-                        <li><a href="research.html#projects">Current Projects</a></li>
-                        <li><a href="research.html#applications">AI/NLP Applications</a></li>
-                        <li><a href="research.html#collaborations">Collaborations</a></li>
+                        <li><a href="research.html">Overview</a></li>
+                        <li><a href="nli.html">Natural Language Inference</a></li>
+                        <li><a href="greek-nlp.html">Greek NLP</a></li>
+                        <li><a href="type-theory.html">Type-Theoretical Semantics</a></li>
+                        <li><a href="digital-humanities.html">Digital Humanities</a></li>
+                        <li><a href="distance-studies.html">Linguistic Distance Studies</a></li>
+                        <li><a href="llms.html">Large Language Models</a></li>
                     </ul>
                 </li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="datasets.html">Datasets</a></li>
                 <li class="has-dropdown">
                     <a href="#" onclick="return false;" style="cursor: pointer;">Team</a>
                     <ul class="nav-dropdown">
@@ -55,14 +61,7 @@
                         <li><a href="team.html#join">Join Our Team</a></li>
                     </ul>
                 </li>
-                <li class="has-dropdown">
-                    <a href="publications.html">Publications</a>
-                    <ul class="nav-dropdown">
-                        <li><a href="publications.html#recent">Recent Publications</a></li>
-                        <li><a href="publications.html#datasets">Datasets & Resources</a></li>
-                        <li><a href="publications.html#complete">Complete Bibliography</a></li>
-                    </ul>
-                </li>
+                <li><a href="news.html">News</a></li>
                 <li><a href="demos.html">Live Demos</a></li>
                 <li><a href="software.html">Software</a></li>
                 <li><a href="research-map.html">Research Map</a></li>
@@ -246,7 +245,8 @@
             <div class="powered-by">
                 <span class="powered-by-text">Powered by</span>
                 <a href="https://www.simasiaai.gr/" target="_blank" rel="noopener noreferrer">
-                    <img src="images/simasiaai-logo.png" alt="SimasiaAI" class="powered-by-logo">
+                    <img src="images/simasiaai-logo.png" alt="SimasiaAI" class="powered-by-logo"
+                        onerror="this.style.display='none'">
                 </a>
             </div>
         </div>

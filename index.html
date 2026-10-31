@@ -19,6 +19,7 @@
         content="SVARNA bridges NLP, theoretical linguistics and neural-symbolic AI. Leading research in Greek NLP, natural language inference, type theory, and digital humanities.">
     <link rel="icon" type="image/png" href="images/svarna-logo.png">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="enhance.css">
     <script>(function(){try{var t=localStorage.getItem('svarna-theme')||((window.matchMedia&&matchMedia('(prefers-color-scheme:dark)').matches)?'dark':'light');document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -47,6 +48,7 @@
                 <li class="has-dropdown">
                     <a href="#" onclick="return false;" style="cursor: pointer;">Research</a>
                     <ul class="nav-dropdown">
+                        <li><a href="research.html">Overview</a></li>
                         <li><a href="nli.html">Natural Language Inference</a></li>
                         <li><a href="greek-nlp.html">Greek NLP</a></li>
                         <li><a href="type-theory.html">Type-Theoretical Semantics</a></li>
@@ -77,6 +79,7 @@
 
     <!-- Hero Section -->
     <header class="hero">
+        <canvas class="hero-canvas" aria-hidden="true"></canvas>
         <div class="container">
             <img src="images/svarna-hero.png" alt="SVARNA emblem" style="height:300px;width:auto;max-width:90%;display:block;margin:0 auto 1.5rem;">
             <h1>SVARNA</h1>
@@ -86,8 +89,40 @@
                 <a href="publications.html" class="btn btn-primary">View Publications</a>
                 <a href="datasets.html" class="btn btn-secondary">View Datasets</a>
             </div>
+            <div class="hero-stats">
+                <a class="hero-stat" href="publications.html"><b><!--stat:publications-->41<!--/stat--></b><span>publications</span></a>
+                <a class="hero-stat" href="datasets.html"><b><!--stat:datasets-->6<!--/stat--></b><span>datasets</span></a>
+                <a class="hero-stat" href="software.html"><b><!--stat:software-->34<!--/stat--></b><span>tools &amp; resources</span></a>
+                <a class="hero-stat" href="demos.html"><b><!--stat:demos-->9<!--/stat--></b><span>live demos</span></a>
+            </div>
         </div>
     </header>
+
+    <!-- Interactive: one Greek sentence, four views -->
+    <section class="section" id="one-sentence">
+        <div class="container">
+            <div class="section-header">
+                <p class="nz-eyebrow">interactive</p>
+                <h2>One Greek sentence, four views</h2>
+                <p class="section-subtitle">
+                    The sentence <span class="nz-sentence">«Κάθε φοιτητής διαβάζει ένα βιβλίο»</span> (every student
+                    reads a book) is shown as the lab analyses it: as dependencies, as types, as a growing Dynamic
+                    Syntax tree, and as a proof. Each analysis is embedded so that distances in the vector space
+                    reproduce distances in the tree, and is then passed to a neural encoder. Hover a node to follow it
+                    through all three stages.
+                </p>
+            </div>
+            <div class="nz-tabs" id="nzTabs" role="tablist"></div>
+            <div class="nz-viz">
+                <svg id="nzSvg" viewBox="0 0 1200 480" role="img" aria-label="A Greek sentence analysed symbolically, embedded geometrically and processed by a neural encoder"></svg>
+            </div>
+            <div class="nz-info">
+                <div class="nz-card" id="nzTheory"></div>
+                <div class="nz-card" id="nzNode"></div>
+                <div class="nz-card" id="nzGeom"></div>
+            </div>
+        </div>
+    </section>
 
 
     <!-- Research Highlights -->
@@ -103,7 +138,25 @@
             <div class="research-grid" style="margin-top: 3rem;">
                 <a href="nli.html" class="research-card" style="text-decoration: none; color: inherit;">
                     <div class="research-icon contain-image">
-                        <img src="images/zeugma.png" alt="Neural-Symbolic Integration" loading="lazy">
+                        <svg class="zg" viewBox="0 0 400 200" role="img" aria-label="Zeugma: ancient text, LLM extraction, knowledge graph, Prolog reasoning">
+                            <path class="zg-flow" d="M86 92 H124 M190 92 H222 M290 92 H318"/>
+                            <path class="zg-tip" d="M120 87 l6 5 -6 5 M218 87 l6 5 -6 5 M314 87 l6 5 -6 5"/>
+                            <rect class="zg-box" x="30" y="60" width="56" height="64" rx="8"/>
+                            <text class="zg-greek" x="40" y="83">Μ</text>
+                            <path class="zg-line" d="M56 78 H76 M40 94 H76 M40 106 H70 M40 116 H62"/>
+                            <g class="zg-nn"><path d="M140 76 L162 84 M140 76 L162 100 M140 92 L162 84 M140 92 L162 100 M140 108 L162 84 M140 108 L162 100 M162 84 L180 92 M162 100 L180 92"/></g>
+                            <circle class="zg-dot" cx="140" cy="76" r="4.5"/><circle class="zg-dot" cx="140" cy="92" r="4.5"/><circle class="zg-dot" cx="140" cy="108" r="4.5"/>
+                            <circle class="zg-dot" cx="162" cy="84" r="4.5"/><circle class="zg-dot" cx="162" cy="100" r="4.5"/><circle class="zg-dot hi" cx="180" cy="92" r="5"/>
+                            <path class="zg-edge" d="M236 70 L270 64 M236 70 L232 108 M236 70 L262 116 M270 64 L262 116 M270 64 L284 96 M284 96 L262 116"/>
+                            <circle class="zg-node" cx="236" cy="70" r="6"/><circle class="zg-node" cx="270" cy="64" r="6"/><circle class="zg-node" cx="232" cy="108" r="5"/>
+                            <circle class="zg-node" cx="284" cy="96" r="5"/><circle class="zg-node hi" cx="262" cy="116" r="6.5"/>
+                            <rect class="zg-box" x="322" y="60" width="56" height="64" rx="8"/>
+                            <path class="zg-turnp" d="M341 74 V110 M341 92 H364"/>
+                            <text class="zg-lab" x="58" y="152" text-anchor="middle">text</text>
+                            <text class="zg-lab" x="160" y="152" text-anchor="middle">LLM</text>
+                            <text class="zg-lab" x="258" y="152" text-anchor="middle">graph</text>
+                            <text class="zg-lab" x="350" y="152" text-anchor="middle">Prolog</text>
+                        </svg>
                     </div>
                     <h3>Neural-Symbolic Integration</h3>
                     <p>Combining the scalability of neural models with the interpretability of symbolic reasoning</p>
@@ -185,6 +238,7 @@
                         <div class="card-meta">
                             <span class="badge badge-primary">2024</span>
                             <span class="badge badge-accent">Dataset</span>
+                            <span class="badge badge-venue">Findings of EACL 2024</span>
                         </div>
                         <h3 class="card-title">OYXOY: Modern Greek NLP Test Suite</h3>
                         <p class="card-text">
@@ -194,10 +248,9 @@
                         </p>
                         <div class="card-footer">
                             <a href="https://aclanthology.org/2024.findings-eacl.21/" class="pub-link"
-                                target="_blank">📄 Paper</a>
-                            <a href="https://github.com/StergiosCha/OYXOY" class="pub-link" target="_blank">💻 Code</a>
-                            <a href="https://zenodo.org/records/12704732" class="pub-link" target="_blank">📊
-                                Dataset</a>
+                                target="_blank"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/><path d="M9 12h6M9 16h6"/></svg>Paper</a>
+                            <a href="https://github.com/StergiosCha/OYXOY" class="pub-link" target="_blank"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5"/></svg>Code</a>
+                            <a href="https://zenodo.org/records/12704732" class="pub-link" target="_blank"><svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v12c0 1.7 3.1 3 7 3s7-1.3 7-3V6"/><path d="M5 12c0 1.7 3.1 3 7 3s7-1.3 7-3"/></svg>Dataset</a>
                         </div>
                     </div>
                 </div>
@@ -207,6 +260,7 @@
                         <div class="card-meta">
                             <span class="badge badge-primary">2025</span>
                             <span class="badge badge-success">Monograph</span>
+                            <span class="badge badge-venue">Cambridge Elements</span>
                         </div>
                         <h3 class="card-title">Theories of Types and the Structure of Meaning</h3>
                         <p class="card-text">
@@ -216,7 +270,7 @@
                         </p>
                         <div class="card-footer">
                             <a href="https://www.cambridge.org/core/what-we-publish/elements" class="pub-link"
-                                target="_blank">📚 Publisher</a>
+                                target="_blank"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3z"/><path d="M5 17a3 3 0 0 1 3-3h11"/></svg>Publisher</a>
                         </div>
                     </div>
                 </div>
@@ -226,6 +280,7 @@
                         <div class="card-meta">
                             <span class="badge badge-primary">2025</span>
                             <span class="badge badge-accent">AI+Humanities</span>
+                            <span class="badge badge-venue">NLP4DH @ NAACL 2025</span>
                         </div>
                         <h3 class="card-title">RAG-Enhanced Greek Poetry Generation</h3>
                         <p class="card-text">
@@ -234,8 +289,7 @@
                             Published at NLP4DH 2025 (NAACL).
                         </p>
                         <div class="card-footer">
-                            <a href="https://aclanthology.org/2025.nlp4dh-1.22/" class="pub-link" target="_blank">📄
-                                Paper</a>
+                            <a href="https://aclanthology.org/2025.nlp4dh-1.22/" class="pub-link" target="_blank"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/><path d="M9 12h6M9 16h6"/></svg>Paper</a>
                         </div>
                     </div>
                 </div>
@@ -249,27 +303,27 @@
             <h2 class="text-center mb-xl">Research Themes</h2>
             <div class="themes-grid">
                 <a href="nli.html" class="theme-card">
-                    <div class="theme-icon">🧠</div>
+                    <div class="theme-icon svg-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="2.5" y="3.5" width="8" height="6" rx="1.5"/><rect x="13.5" y="14.5" width="8" height="6" rx="1.5"/><path d="M10.5 6.5h3.5a3 3 0 0 1 3 3v5"/><path d="M15 12.5l2 2 2-2"/><path d="M5 13v2M5 18v.5"/></svg></div>
                     <div class="theme-title">Natural Language Inference</div>
                 </a>
                 <a href="greek-nlp.html" class="theme-card">
-                    <div class="theme-icon">🇬🇷</div>
+                    <div class="theme-icon svg-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3.5 4.5h17v11h-10l-5 4v-4h-2z"/><text x="12" y="12.6" text-anchor="middle" font-family="Crimson Pro, Georgia, serif" font-size="8.5" fill="currentColor" stroke="none" style="fill:var(--color-accent)">αβγ</text></svg></div>
                     <div class="theme-title">Greek NLP Resources</div>
                 </a>
                 <a href="type-theory.html" class="theme-card">
-                    <div class="theme-icon">📊</div>
+                    <div class="theme-icon svg-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3.5H4v17h2M18 3.5h2v17h-2"/><path d="M9 6.5l6.5 11M12.4 12.3L8.5 17.5"/></svg></div>
                     <div class="theme-title">Type-Theoretical Semantics</div>
                 </a>
                 <a href="digital-humanities.html" class="theme-card">
-                    <div class="theme-icon">📚</div>
+                    <div class="theme-icon svg-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 5.5c3-1.2 6-1.2 9 .8v13c-3-2-6-2-9-.8z"/><path d="M21 5.5c-3-1.2-6-1.2-9 .8v13c3-2 6-2 9-.8z"/></svg></div>
                     <div class="theme-title">Digital Humanities</div>
                 </a>
                 <a href="distance-studies.html" class="theme-card">
-                    <div class="theme-icon">🗣️</div>
+                    <div class="theme-icon svg-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="5" cy="17" r="2.5"/><circle cx="19" cy="7" r="2.5"/><circle cx="17" cy="18" r="1.8"/><path d="M7.2 15.5l9.6-7" stroke-dasharray="2 2.2"/><path d="M7.4 17.3l7.8.5" stroke-dasharray="2 2.2"/></svg></div>
                     <div class="theme-title">Linguistic Distance Studies</div>
                 </a>
                 <a href="nli.html" class="theme-card">
-                    <div class="theme-icon">🔬</div>
+                    <div class="theme-icon svg-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5v17"/><path d="M7 8.5h3M6 12h4M7 15.5h3"/><circle cx="16" cy="8.5" r="1.3"/><circle cx="16.5" cy="15" r="1.3"/><path d="M12 12h2.5l1.5-2.2M14.5 12l1.6 1.8"/></svg></div>
                     <div class="theme-title">Neural-Symbolic Integration</div>
                 </a>
             </div>
@@ -289,7 +343,7 @@
                     models offer the scalability and robustness that symbolic systems need. Our work aims at the
                     synthesis of these
                     approaches, developing systems that are both powerful and explainable, in effect systems with
-                    properties neededessential for building AI we can trust."
+                    properties essential for building AI we can trust."
                 </p>
                 <p class="mt-md" style="color: var(--color-text-muted);">
                     SVARNA Research Statement
@@ -331,6 +385,7 @@
     </footer>
     <script src="mobile-menu.js"></script>
     <script src="theme.js"></script>
+    <script src="svarna-viz.js"></script>
 </body>
 
 </html>

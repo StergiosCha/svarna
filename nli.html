@@ -19,6 +19,7 @@
         content="SVARNA's work on natural language inference: reasoning capabilities, punctuation effects, neural-symbolic integration using logical programming and proof-assistant technology">
     <link rel="icon" type="image/png" href="images/svarna-logo.png">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="enhance.css">
     <script>(function(){try{var t=localStorage.getItem('svarna-theme')||((window.matchMedia&&matchMedia('(prefers-color-scheme:dark)').matches)?'dark':'light');document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,8 +32,9 @@
     <nav class="navbar">
         <div class="container">
             <div class="nav-brand">
-                <a href="index.html" style="display: flex; align-items: center; text-decoration: none;">
-                    <img src="images/svarna-logo.png" alt="SVARNA Lab Logo" class="logo">
+                <a href="index.html">
+                    <img src="images/svarna-logo.png" alt="SVARNA Lab Logo" class="logo"
+                        onerror="this.style.display='none'">
                     <h1>SVARNA</h1>
                 </a>
             </div>
@@ -46,7 +48,8 @@
                 <li class="has-dropdown">
                     <a href="#" onclick="return false;" style="cursor: pointer;" class="active">Research</a>
                     <ul class="nav-dropdown">
-                        <li><a href="nli.html" class="active">Natural Language Inference</a></li>
+                        <li><a href="research.html">Overview</a></li>
+                        <li><a href="nli.html">Natural Language Inference</a></li>
                         <li><a href="greek-nlp.html">Greek NLP</a></li>
                         <li><a href="type-theory.html">Type-Theoretical Semantics</a></li>
                         <li><a href="digital-humanities.html">Digital Humanities</a></li>
@@ -54,6 +57,8 @@
                         <li><a href="llms.html">Large Language Models</a></li>
                     </ul>
                 </li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="datasets.html">Datasets</a></li>
                 <li class="has-dropdown">
                     <a href="#" onclick="return false;" style="cursor: pointer;">Team</a>
                     <ul class="nav-dropdown">
@@ -62,14 +67,7 @@
                         <li><a href="team.html#join">Join Our Team</a></li>
                     </ul>
                 </li>
-                <li class="has-dropdown">
-                    <a href="publications.html">Publications</a>
-                    <ul class="nav-dropdown">
-                        <li><a href="publications.html#recent">Recent Publications</a></li>
-                        <li><a href="publications.html#datasets">Datasets & Resources</a></li>
-                        <li><a href="publications.html#complete">Complete Bibliography</a></li>
-                    </ul>
-                </li>
+                <li><a href="news.html">News</a></li>
                 <li><a href="demos.html">Live Demos</a></li>
                 <li><a href="software.html">Software</a></li>
                 <li><a href="research-map.html">Research Map</a></li>
@@ -163,7 +161,25 @@
 
                     <div class="research-card">
                         <div class="research-icon contain-image">
-                            <img src="images/zeugma.png" alt="Zeugma" loading="lazy">
+                            <svg class="zg" viewBox="0 0 400 200" role="img" aria-label="Zeugma: ancient text, LLM extraction, knowledge graph, Prolog reasoning">
+                            <path class="zg-flow" d="M86 92 H124 M190 92 H222 M290 92 H318"/>
+                            <path class="zg-tip" d="M120 87 l6 5 -6 5 M218 87 l6 5 -6 5 M314 87 l6 5 -6 5"/>
+                            <rect class="zg-box" x="30" y="60" width="56" height="64" rx="8"/>
+                            <text class="zg-greek" x="40" y="83">Μ</text>
+                            <path class="zg-line" d="M56 78 H76 M40 94 H76 M40 106 H70 M40 116 H62"/>
+                            <g class="zg-nn"><path d="M140 76 L162 84 M140 76 L162 100 M140 92 L162 84 M140 92 L162 100 M140 108 L162 84 M140 108 L162 100 M162 84 L180 92 M162 100 L180 92"/></g>
+                            <circle class="zg-dot" cx="140" cy="76" r="4.5"/><circle class="zg-dot" cx="140" cy="92" r="4.5"/><circle class="zg-dot" cx="140" cy="108" r="4.5"/>
+                            <circle class="zg-dot" cx="162" cy="84" r="4.5"/><circle class="zg-dot" cx="162" cy="100" r="4.5"/><circle class="zg-dot hi" cx="180" cy="92" r="5"/>
+                            <path class="zg-edge" d="M236 70 L270 64 M236 70 L232 108 M236 70 L262 116 M270 64 L262 116 M270 64 L284 96 M284 96 L262 116"/>
+                            <circle class="zg-node" cx="236" cy="70" r="6"/><circle class="zg-node" cx="270" cy="64" r="6"/><circle class="zg-node" cx="232" cy="108" r="5"/>
+                            <circle class="zg-node" cx="284" cy="96" r="5"/><circle class="zg-node hi" cx="262" cy="116" r="6.5"/>
+                            <rect class="zg-box" x="322" y="60" width="56" height="64" rx="8"/>
+                            <path class="zg-turnp" d="M341 74 V110 M341 92 H364"/>
+                            <text class="zg-lab" x="58" y="152" text-anchor="middle">text</text>
+                            <text class="zg-lab" x="160" y="152" text-anchor="middle">LLM</text>
+                            <text class="zg-lab" x="258" y="152" text-anchor="middle">graph</text>
+                            <text class="zg-lab" x="350" y="152" text-anchor="middle">Prolog</text>
+                        </svg>
                         </div>
                         <h3>Zeugma</h3>
                         <p>
@@ -200,7 +216,7 @@
 
                 <div class="about-grid" style="margin-top: 4rem;">
                     <div class="about-image">
-                        <img src="images/oyxoy.png" alt="OYXOY Dataset" loading="lazy">
+                        <div class="svf" data-fig="oyxoy"><noscript><img src="images/oyxoy.png" alt="OYXOY Dataset" loading="lazy"></noscript></div>
                     </div>
                     <div class="about-text">
                         <h3>OYXOY: Multi-Label NLI for Greek</h3>
@@ -350,13 +366,15 @@
             <div class="powered-by">
                 <span class="powered-by-text">Powered by</span>
                 <a href="https://www.simasiaai.gr/" target="_blank" rel="noopener noreferrer">
-                    <img src="images/simasiaai-logo.png" alt="SimasiaAI" class="powered-by-logo">
+                    <img src="images/simasiaai-logo.png" alt="SimasiaAI" class="powered-by-logo"
+                        onerror="this.style.display='none'">
                 </a>
             </div>
         </div>
     </footer>
     <script src="mobile-menu.js"></script>
     <script src="theme.js"></script>
+    <script src="figures.js"></script>
 </body>
 
 </html>
